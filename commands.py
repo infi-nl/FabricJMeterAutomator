@@ -54,8 +54,8 @@ def close_screen_sessions(identifier):
     run('screen -ls | grep ' + identifier + ' | cut -d. -f1 | awk \'{print $1}\' | xargs kill')
 
 # Download JMeter logfile
-def get_jmeter_logs(identifier):
-    get('~/jmeter/' + identifier + '/bin/' + timestamp + '.jtl', 'jmeterlog_' + timestamp + '.jtl')    
+def get_jmeter_logs(path):
+    get(path + '/bin/' + timestamp + '.jtl', 'jmeterlog_' + timestamp + '.jtl')    
 
 
 # Upload zip file, unpack contents and clean up

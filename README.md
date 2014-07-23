@@ -1,6 +1,6 @@
-=== Fabric JMeter load test automator ===
+# Fabric JMeter load test automator #
 
--- Introduction --
+## Introduction ##
 
 This Fabric script can be used to automatically install and run a JMeter load test on multiple server instances
 without having to manually configure each instance. The server instances are required to be accessible through
@@ -11,7 +11,7 @@ in order to run JMeter.
 The script has been tested on Amazon EC2 Ubuntu servers, but is expected to be compatible with similar set-ups
 as well. Please share your own experiences!
 
--- HOWTO --
+## How To Use #
 
 1. Install Fabric
 
@@ -71,12 +71,12 @@ as well. Please share your own experiences!
 
 	- In the directory where fabfile.py (and jmeter.zip and loadtest.zip) reside, run:
 
-		fab install:<identifier>
+			fab install:<identifier>
 
 	  Where <identifier> is a string value that allows you to give a unique name to the load test session.
       Example:
 
-		fab install:jmeter_firsttest
+			fab install:jmeter_firsttest
 
 	  NOTE: If you already installed JMeter with the given session identifier you will have to use the
 	       'reinstall' command to confirm you want to overwrite the existing installation.
@@ -113,7 +113,7 @@ as well. Please share your own experiences!
 	The above command will use your installation of 'jmeter_firsttest', and will run the load test with
 	10 threads and in 10 loops.
 
--- Troubleshooting --
+## Troubleshooting ##
 
 Mail me: jiri.bakker@infi.nl
 

@@ -55,4 +55,4 @@ def start(identifier, threads, loops):
     execute(start_jmeter_server,   identifier=identifier, path=path, hosts=allHosts)
     execute(start_jmeter_loadtest, path=path, allHosts=allHosts, threads=threads, loops=loops, hosts=controlHost)
     execute(close_screen_sessions, identifier=identifier, hosts=allHosts)
-    execute(get_jmeter_logs,       identifier=identifier, hosts=controlHost)
+    execute(get_jmeter_logs,       hosts=controlHost, path=path)
